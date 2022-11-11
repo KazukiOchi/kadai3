@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>お前ら馬鹿だからよぉ</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<p>
+<label>名前：<input type="text" id="nameText"></label>
+<label>番号：<input type="text" id="numText"></label>
+<select name="mondai" id="mondainum">
+    <option value="one">問1</option>
+    <option value="two">問2</option>
+</select>
+<input type="button" value="Go" id="checkButton">
+</p>
+
+<p id="msg"></p>
+
+<script>
+function butotnClick(){
+  if(mondainum.value == "one"){
+    let　top = '/* 問題１:' + numText.value +':' + nameText.value + '*/</br>';
+    let code = '#include &lt;stdio.h&gt; </br>int main () {</br>double w[] = {68.5, 69.2, 72.3, 69.4, 70.0, 70.5};</br>double s;</br>';
+    document.write(top,code);
+    if(Math.random()*10 > 5){
+        document.write('int i, t, n=6;</br>');
+        if(Math.random()*10 > 5){
+            document.write('for(i = 1;i < n;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('s=w[i]-w[i-1];</br>');
+                document.write('printf("%d:%4.1f &#92;n",i+1,s);</br>');
+            }else{
+                document.write('printf("%d:%4.1f &#92;n",i+1,w[i+1]-w[i]);</br>');
+            }
+        }else{
+            document.write('for(i = 0;i < n-1;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('s=w[i+1]-w[i];</br>');
+                document.write('printf("%d:%4.1f &#92;n",i+2,s);</br>');
+            }else{
+                document.write('printf("%d:%4.1f &#92;n",i+2,w[i+1] - w[i]);</br>');
+            }
+        }
+    }else{
+        document.write('int n=6;</br>');
+        if(Math.random()*10 > 5){
+            document.write('for(int i = 1;i < n;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('s=w[i]-w[i-1];</br>');
+                document.write('printf("%d:%4.1f &#92;n",i+1,s);</br>');
+            }else{
+                document.write('printf("%d:%4.1f &#92;n",i+1,w[i] - w[i-1]);</br>');
+            }
+        }else{
+            document.write('for(int i = 0;i < n-1;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('s=w[i+1]-w[i];</br>');
+                document.write('printf("%d:%4.1f &#92;n",i+2,s);</br>');
+            }else{
+                document.write('printf("%d:%4.1f &#92;n",i+2,w[i+1] - w[i]);</br>');
+            }
+        }
+    }
+    document.write('}</br>return 0;</br>}');
+  }
+  if(mondainum.value == "two"){
+    let　top = '/* 問題２:' + numText.value +':' + nameText.value + '*/</br>';
+    let code = ' #include &lt;stdio.h&gt;</br>int main () {</br>int s[]={45,88,85,72,90};</br>int r[]={10, 8, 7, 8, 9};</br>';
+    document.write(top,code);
+    if(Math.random()*10 > 5){
+        document.write('int i, t, n=5;</br>');
+        if(Math.random()*10 > 5){
+            document.write('for(i = 0;i < n;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('if(s[i]>=70 && r[i]>=8){</br>printf("O,%d,%d&#92;n", s[i], r[i]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i], r[i]);</br>}</br>');
+            }else{
+                document.write('if(s[i] >69 && r[i] >7){</br>printf("O,%d,%d&#92;n", s[i], r[i]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i], r[i]);</br>}</br>');
+            }
+        }else{
+            document.write('for(i=1;i<=n;i++){;</br>');
+            if(Math.random()*10 > 5){
+                document.write('if(s[i-1]>=70 && r[i-1]>=8){</br>printf("O,%d,%d&#92;n", s[i-1], r[i-1]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i-1], r[i-1]);</br>}</br>');
+            }else{
+                document.write('if(s[i-1] >69 && r[i-1] >7){</br>printf("O,%d,%d&#92;n", s[i-1], r[i-1]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i-1], r[i-1]);</br>}</br>');
+            }
+        }
+    }
+    else{
+        document.write('int n=5;</br>');
+        if(Math.random()*10 > 5){
+            document.write('for(int i = 0;i < n;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('if(s[i]>=70 && r[i]>=8){</br>printf("O,%d,%d&#92;n", s[i], r[i]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i], r[i]);</br>}</br>');
+            }else{
+                document.write('if(s[i] > 69 && r[i] > 7){</br>printf("O,%d,%d&#92;n", s[i], r[i]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i], r[i]);</br>}</br>');
+            }
+        }else{
+            document.write('for(int i=1;i<=n;i++){</br>');
+            if(Math.random()*10 > 5){
+                document.write('if(s[i-1]>69 && r[i-1]>7){</br>printf("O,%d,%d&#92;n", s[i-1], r[i-1]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i-1], r[i-1]);</br>}</br>');
+            }else{
+                document.write('if(s[i-1] >= 70 && r[i-1] >= 8){</br>printf("O,%d,%d&#92;n", s[i-1], r[i-1]);</br>}else{</br>printf("X,%d,%d&#92;n", s[i-1], r[i-1]);</br>}</br>');
+            }
+        }
+    }
+  }
+  document.write('}</br>return 0;</br>}');
+}
+
+let nameText = document.getElementById('nameText');
+nameText.value = '名前';
+let msg = document.getElementById('msg');
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+</script>
+
+</body>
+</html>
